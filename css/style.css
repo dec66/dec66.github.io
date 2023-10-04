@@ -1,0 +1,27 @@
+nav {
+  background-color: black;
+  overflow: auto;
+}
+
+nav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+nav a.active {
+  background-color: green;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
