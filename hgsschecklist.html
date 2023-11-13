@@ -3,56 +3,239 @@
 
 <head>
     <link rel="stylesheet" href="./css/style.css">
-    <title>Games</title>
+    <title>HGSS Checklist</title>
+    <script src="./js/dailychecklist.js"></script>
 </head>
 
 <body>
     <nav>
         <ul>
             <li><a href="./index.html">Home</a></li>
-            <li><a class="active" href="./games.html">Games</a>
+            <li><a href="./games.html">Games</a>
                 <ul>
                     <li><a href="./fallout.html">Fallout</a></li>
                     <li><a href="./pokemon.html">Pokémon</a></li>
                     <li><a href="./animalcrossing.html">Animal Crossing</a></li>
                 </ul>
             </li>
+            <li><a class="active" href="./hgsschecklist.html">HGSS Checklist</a>
         </ul>
     </nav>
 
+    <p>This only covers repeatable events and assumes you have completed most of the game</p>
+    <p><a href="https://bulbapedia.bulbagarden.net/wiki/Days_of_the_week#HeartGold_and_SoulSilver"
+            target="_blank">Bulbapedia Days of the Week</a></p>
+
     <ul class="checklist">
-        <li><input type="checkbox" id="item1"><label for="item1">Task 1</label></li>
+        <li><input type="checkbox"><label>Swarm (Professor Oak's Pokémon Talk)</label></li>
+        <li><input type="checkbox"><label>Buena's Password (Goldenrod City)</label></li>
+        <li><input type="checkbox"><label>Lottery (Goldenrod City)</label></li>
+        <li><input type="checkbox"><label>Seals (Olivine City)</label></li>
+        <li><input type="checkbox"><label>Vocabulary (Route 16)</label></li>
+        <li><input type="checkbox"><label>Apricorn Balls from Kurt (Azalea Town)</label></li>
+        <li><input type="checkbox"><label>Daisy 15:00-16:00 (Pallet Town)</label></li>
     </ul>
 
     <ul id="monday" class="checklist day-content">
-        <li><input type="checkbox" id="item1"><label for="item1">m 1</label></li>
+        <li>
+            <h3>Monday</h3>
+        </li>
+        <li><input type="checkbox"><label>Raffle - TM65 Shadow Claw, Nest Ball (Goldenrod Department Store)</label></li>
+        <li><input type="checkbox"><label>S.S. Aqua (Olivine City)</label></li>
+        <li><input type="checkbox"><label>Silver Rematch (Indigo Plateau)</label></li>
+        <li><input type="checkbox"><label>Week Sibling Monica (Route 40)</label></li>
+        <li>
+            <h4>Morning</h4>
+        </li>
+        <li><input type="checkbox"><label>School Kid Jack (National Park)</label></li>
+        <li><input type="checkbox"><label>PokéManiac Brent (Route 43)</label></li>
+        <li><input type="checkbox"><label>Biker Aiden (Route 17)</label></li>
+        <li><input type="checkbox"><label>Pryce (Fighting Dojo)</label></li>
+        <li>
+            <h4>Afternoon</h4>
+        </li>
+        <li><input type="checkbox"><label>Youngster Joey (Route 30)</label></li>
+        <li><input type="checkbox"><label>Firebreather Walt (Route 35)</label></li>
+        <li><input type="checkbox"><label>Janine (Fighting Dojo)</label></li>
+        <li>
+            <h4>Night</h4>
+        </li>
+        <li><input type="checkbox"><label>Clefairy Dance (Mt. Moon)</label></li>
+        <li><input type="checkbox"><label>Camper Tanner (Route 13)</label></li>
     </ul>
 
     <ul id="tuesday" class="checklist day-content">
-        <li><input type="checkbox" id="item1"><label for="item1">t 1</label></li>
+        <li>
+            <h3>Tuesday</h3>
+        </li>
+        <li><input type="checkbox"><label>Bug Catching Contest (National Park)</label></li>
+        <li><input type="checkbox"><label>Raffle - TM91 Flash Cannon, Repeat Ball (Goldenrod Department Store)</label>
+        </li>
+        <li><input type="checkbox"><label>Older Haircut Brother (Goldenrod Tunnel)</label></li>
+        <li><input type="checkbox"><label>Week Sibling Tuscany (Route 29)</label></li>
+        <li>
+            <h4>Morning</h4>
+        </li>
+        <li><input type="checkbox"><label>Bug Catcher Arnie (Route 35)</label></li>
+        <li>
+            <h4>Afternoon</h4>
+        </li>
+        <li><input type="checkbox"><label>Gentleman Alfred (Glitter Lighthouse)</label></li>
+        <li><input type="checkbox"><label>Picnicker Tiffany (Route 43)</label></li>
+        <li><input type="checkbox"><label>Blaine (Fighting Dojo)</label></li>
+        <li>
+            <h4>Night</h4>
+        </li>
+        <li><input type="checkbox"><label>Bug Catcher Wade (Route 31)</label></li>
+        <li><input type="checkbox"><label>Bird Keeper Josh (Route 14)</label></li>
+        <li><input type="checkbox"><label>Morty (Fighting Dojo)</label></li>
     </ul>
 
     <ul id="wednesday" class="checklist day-content">
-        <li><input type="checkbox" id="item1"><label for="item1">w 1</label></li>
+        <li>
+            <h3>Wednesday</h3>
+        </li>
+        <li><input type="checkbox"><label>Raffle - TM57 Charge Beam, Net Ball (Goldenrod Department Store)</label></li>
+        <li><input type="checkbox"><label>Hoenn Sound</label></li>
+        <li><input type="checkbox"><label>S.S. Aqua (Vermilion City)</label></li>
+        <li><input type="checkbox"><label>Silver Rematch (Indigo Plateau)</label></li>
+        <li><input type="checkbox"><label>Younger Haircut Brother (Goldenrod Tunnel)</label></li>
+        <li><input type="checkbox"><label>Week Sibling Wesley (Lake of Rage)</label></li>
+        <li>
+            <h4>Morning</h4>
+        </li>
+        <li><input type="checkbox"><label>Fisherman Ralph (Route 32)</label></li>
+        <li><input type="checkbox"><label>Bug Catcher Doug (Route 2)</label></li>
+        <li><input type="checkbox"><label>Misty (Fighting Dojo)</label></li>
+        <li>
+            <h4>Afternoon</h4>
+        </li>
+        <li><input type="checkbox"><label>School Kid Alan (Route 36)</label></li>
+        <li><input type="checkbox"><label>Fisherman Kyle (Route 12)</label></li>
+        <li><input type="checkbox"><label>Jasmine (Fighting Dojo)</label></li>
+        <li>
+            <h4>Night</h4>
+        </li>
+        <li><input type="checkbox"><label>Sailor Huey (Glitter Lighthouse)</label></li>
+        <li><input type="checkbox"><label>Bird Keeper Vance (Route 44)</label></li>
+        <li><input type="checkbox"><label>School Kid Torin (Route 14)</label></li>
+        <li><input type="checkbox"><label>Chuck (Fighting Dojo)</label></li>
     </ul>
 
     <ul id="thursday" class="checklist day-content">
-        <li><input type="checkbox" id="item1"><label for="item1">t 1</label></li>
+        <li>
+            <h3>Thursday</h3>
+        </li>
+        <li><input type="checkbox"><label>Bug Catching Contest (National Park)</label></li>
+        <li><input type="checkbox"><label>Raffle - TM60 Drain Punch, Quick Ball (Goldenrod Department Store)</label>
+        </li>
+        <li><input type="checkbox"><label>Sinnoh Sound</label></li>
+        <li><input type="checkbox"><label>Older Haircut Brother (Goldenrod Tunnel)</label></li>
+        <li><input type="checkbox"><label>Week Sibling Arthur (Route 36)</label></li>
+        <li>
+            <h4>Morning</h4>
+        </li>
+        <li><input type="checkbox"><label>Fisherman Wilton (Route 44)</label></li>
+        <li><input type="checkbox"><label>Ace Trainer Gaven (Route 26)</label></li>
+        <li>
+            <h4>Afternoon</h4>
+        </li>
+        <li><input type="checkbox"><label>Picnicker Liz (Route 32)</label></li>
+        <li><input type="checkbox"><label>Fisherman Kyler (Route 12)</label></li>
+        <li><input type="checkbox"><label>Bugsy (Fighting Dojo)</label></li>
+        <li>
+            <h4>Night</h4>
+        </li>
+        <li><input type="checkbox"><label>Lass Ddana (Route 38)</label></li>
+        <li><input type="checkbox"><label>Teacher Hillary (Route 15)</label></li>
     </ul>
 
     <ul id="friday" class="checklist day-content">
-        <li><input type="checkbox" id="item1"><label for="item1">f 1</label></li>
+        <li>
+            <h3>Friday</h3>
+        </li>
+        <li><input type="checkbox"><label>Raffle - TM42 Facade, Dusk Ball (Goldenrod Department Store)</label></li>
+        <li><input type="checkbox"><label>Lapras (Union Cave)</label></li>
+        <li><input type="checkbox"><label>S.S. Aqua (Olivine City)</label></li>
+        <li><input type="checkbox"><label>Younger Haircut Brother (Goldenrod Tunnel)</label></li>
+        <li><input type="checkbox"><label>Week Sibling Frieda (Route 32)</label></li>
+        <li>
+            <h4>Morning</h4>
+        </li>
+        <li><input type="checkbox"><label>School Kid Chad (Route 38)</label></li>
+        <li><input type="checkbox"><label>Bug Catcher Rob (Route 2)</label></li>
+        <li><input type="checkbox"><label>Lt. Surge (Fighting Dojo)</label></li>
+        <li>
+            <h4>Afternoon</h4>
+        </li>
+        <li><input type="checkbox"><label>Hiker Parry (Route 45)</label></li>
+        <li><input type="checkbox"><label>Young Couple Tim & Sue (Route 13)</label></li>
+        <li><input type="checkbox"><label>Ace Trainer Jamie (Route 26)</label></li>
+        <li>
+            <h4>Night</h4>
+        </li>
+        <li><input type="checkbox"><label>Hiker Anthony (Route 33)</label></li>
+        <li><input type="checkbox"><label>School Kid Billy (Route 15)</label></li>
+        <li><input type="checkbox"><label>Clair (Fighting Dojo)</label></li>
     </ul>
 
     <ul id="saturday" class="checklist day-content">
-        <li><input type="checkbox" id="item1"><label for="item1">sat 1</label></li>
+        <li>
+            <h3>Saturday</h3>
+        </li>
+        <li><input type="checkbox"><label>Bug Catching Contest (National Park)</label></li>
+        <li><input type="checkbox"><label>Raffle - TM62 Silver Wind, Timer Ball (Goldenrod Department Store)</label>
+        </li>
+        <li><input type="checkbox"><label>Older Haircut Brother (Goldenrod Tunnel)</label></li>
+        <li><input type="checkbox"><label>Week Sibling Santos (Blackthorn City)</label></li>
+        <li>
+            <h4>Morning</h4>
+        </li>
+        <li><input type="checkbox"><label>Camper Todd (Route 34)</label></li>
+        <li><input type="checkbox"><label>Youngster Ian (Route 34)</label></li>
+        <li><input type="checkbox"><label>Falkner (Fighting Dojo)</label></li>
+        <li>
+            <h4>Afternoon</h4>
+        </li>
+        <li><input type="checkbox"><label>Hiker Kenny (Route 13)</label></li>
+        <li><input type="checkbox"><label>Whitney (Fighting Dojo)</label></li>
+        <li>
+            <h4>Night</h4>
+        </li>
+        <li><input type="checkbox"><label>Picnicker Erin (Route 46)</label></li>
+        <li><input type="checkbox"><label>Twins Kay & Tia (Route 15)</label></li>
+        <li><input type="checkbox"><label>Bird Keeper Jose (Route 27)</label></li>
+        <li><input type="checkbox"><label>Brock (Fighting Dojo)</label></li>
     </ul>
 
     <ul id="sunday" class="checklist day-content">
-        <li><input type="checkbox" id="item1"><label for="item1">sun 1</label></li>
+        <li>
+            <h3>Sunday</h3>
+        </li>
+        <li><input type="checkbox"><label>Raffle - TM02 Dragon Claw, Luxury Ball (Goldenrod Department Store)</label>
+        </li>
+        <li><input type="checkbox"><label>S.S. Aqua (Vermilion City)</label></li>
+        <li><input type="checkbox"><label>Younger Haircut Brother (Goldenrod Tunnel)</label></li>
+        <li><input type="checkbox"><label>Week Sibling Sunny (Route 37)</label></li>
+        <li>
+            <h4>Morning</h4>
+        </li>
+        <li><input type="checkbox"><label>Lass Krise (National Park)</label></li>
+        <li><input type="checkbox"><label>Ace Trainer Reena (Route 27)</label></li>
+        <li><input type="checkbox"><label>Erika (Fighting Dojo)</label></li>
+        <li>
+            <h4>Afternoon</h4>
+        </li>
+        <li><input type="checkbox"><label>Picnicker Gina (Route 34)</label></li>
+        <li><input type="checkbox"><label>Fisherman Tully (Route 42)</label></li>
+        <li><input type="checkbox"><label>Biker Ernest (Route 17)</label></li>
+        <li><input type="checkbox"><label>Sabrina (Fighting Dojo)</label></li>
+        <li>
+            <h4>Night</h4>
+        </li>
+        <li><input type="checkbox"><label>Biker Reese (Route 17)</label></li>
+        <li><input type="checkbox"><label>Blue (Fighting Dojo)</label></li>
     </ul>
-
-    <script> src = "js/dailychecklist.js"</script>
 
 </body>
 
