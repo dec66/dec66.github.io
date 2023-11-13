@@ -1,0 +1,47 @@
+nav {
+  background-color: black;
+  overflow: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+nav a.active {
+  background-color: green;
+  color: white;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+}
+
+nav li li {
+  float: none;
+}
+
+nav li:hover ul {
+  display: block;
+}
