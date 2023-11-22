@@ -13,6 +13,11 @@ a {
   padding: 0;
 }
 
+.checklist input {
+  width: 15px;
+  height: 15px;
+}
+
 .day-content {
   display: none;
 }
