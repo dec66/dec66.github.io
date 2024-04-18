@@ -23,11 +23,13 @@
         </ul>
     </nav>
 
-    <p>This only covers repeatable events and assumes you have completed most of the game</p>
+    <p>This only covers repeatable events and assumes you have completed most of the game. The state of the checkboxes
+        on this page will persist until the end of the day.</p>
     <p><a href="https://bulbapedia.bulbagarden.net/wiki/Days_of_the_week#HeartGold_and_SoulSilver"
             target="_blank">Bulbapedia Days of the Week</a></p>
 
     <ul class="checklist">
+        <h3>All days</h3>
         <li><label><input type="checkbox">Swarm (Professor Oak's Pokémon Talk)</label></li>
         <li><label><input type="checkbox">Buena's Password (Goldenrod City)</label></li>
         <li><label><input type="checkbox">Lottery (Goldenrod City)</label></li>
@@ -37,7 +39,10 @@
         <li><label><input type="checkbox">Daisy 15:00-16:00 (Pallet Town)</label></li>
     </ul>
 
+    <button onclick="toggleAllSections()">Show all days</button>
+
     <ul id="monday" class="checklist day-content">
+        <hr>
         <h3>Monday</h3>
         <li><label><input type="checkbox">S.S. Aqua (Olivine City)</label></li>
         <li><label><input type="checkbox">Silver Rematch (Indigo Plateau)</label></li>
@@ -59,6 +64,7 @@
     </ul>
 
     <ul id="tuesday" class="checklist day-content">
+        <hr>
         <h3>Tuesday</h3>
         <li><label><input type="checkbox">Bug Catching Contest (National Park)</label></li>
         <li><label><input type="checkbox">Older Haircut Brother (Goldenrod Tunnel)</label></li>
@@ -77,6 +83,7 @@
     </ul>
 
     <ul id="wednesday" class="checklist day-content">
+        <hr>
         <h3>Wednesday</h3>
         <li><label><input type="checkbox">S.S. Aqua (Vermilion City)</label></li>
         <li><label><input type="checkbox">Silver Rematch (Indigo Plateau)</label></li>
@@ -100,6 +107,7 @@
     </ul>
 
     <ul id="thursday" class="checklist day-content">
+        <hr>
         <h3>Thursday</h3>
         <li><label><input type="checkbox">Bug Catching Contest (National Park)</label></li>
         <li><label><input type="checkbox">Older Haircut Brother (Goldenrod Tunnel)</label></li>
@@ -119,6 +127,7 @@
     </ul>
 
     <ul id="friday" class="checklist day-content">
+        <hr>
         <h3>Friday</h3>
         <li><label><input type="checkbox">Lapras (Union Cave)</label></li>
         <li><label><input type="checkbox">S.S. Aqua (Olivine City)</label></li>
@@ -140,6 +149,7 @@
     </ul>
 
     <ul id="saturday" class="checklist day-content">
+        <hr>
         <h3>Saturday</h3>
         <li><label><input type="checkbox">Bug Catching Contest (National Park)</label></li>
         <li><label><input type="checkbox">Older Haircut Brother (Goldenrod Tunnel)</label></li>
@@ -161,6 +171,7 @@
     </ul>
 
     <ul id="sunday" class="checklist day-content">
+        <hr>
         <h3>Sunday</h3>
         <li><label><input type="checkbox">S.S. Aqua (Vermilion City)</label></li>
         <li><label><input type="checkbox">Younger Haircut Brother (Goldenrod Tunnel)</label></li>

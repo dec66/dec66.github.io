@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function displaySectionForToday() {
     const today = new Date().getDay();
     switch (today) {
         case 1:
@@ -23,7 +23,19 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('sunday').style.display = 'block';
             break;
     }
-});
+}
+
+function toggleAllSections() {
+    const sections = document.querySelectorAll('.day-content');
+    sections.forEach(section => {
+        if (section.style.display === 'none') {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+    })
+    displaySectionForToday();
+}
 
 // Retrieve checkbox state from local storage
 function loadCheckboxState() {
@@ -55,15 +67,14 @@ function saveCheckboxState() {
             checkboxState[`checkbox_${index}`] = checkbox.checked;
         });
         localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
-        console.log('Checkbox state saved successfully:', checkboxState);
     } catch (error) {
         console.error('Error saving checkbox state:', error);
     }
 }
 
-// Load checkbox state when the page loads
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     loadCheckboxState();
+    displaySectionForToday();
 });
 
 // Save checkbox state when checkboxes are clicked
