@@ -32,15 +32,13 @@ function loadCheckboxState() {
     if (savedState) {
         const checkboxState = JSON.parse(savedState);
         if (checkboxState.date === today) {
-            // Apply saved state to checkboxes
-            for (const checkboxId in checkboxState) {
-                if (checkboxId !== 'date') {
-                    const checkbox = document.getElementById(checkboxId);
-                    if (checkbox) {
-                        checkbox.checked = checkboxState[checkboxId];
-                    }
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((checkbox, index) => {
+                const checkboxKey = `checkbox_${index}`;
+                if (checkboxState.hasOwnProperty(checkboxKey)) {
+                    checkbox.checked = checkboxState[checkboxKey];
                 }
-            }
+            });
         } else {
             // Clear old state if it's from a previous day
             localStorage.removeItem('checkboxState');
@@ -50,12 +48,17 @@ function loadCheckboxState() {
 
 // Save checkbox state to local storage
 function saveCheckboxState() {
-    const checkboxState = { date: new Date().toISOString().split('T')[0] }; // Store today's date
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach((checkbox) => {
-        checkboxState[checkbox.id] = checkbox.checked;
-    });
-    localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+    try {
+        const checkboxState = { date: new Date().toISOString().split('T')[0] }; // Store today's date
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox, index) => {
+            checkboxState[`checkbox_${index}`] = checkbox.checked;
+        });
+        localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+        console.log('Checkbox state saved successfully:', checkboxState);
+    } catch (error) {
+        console.error('Error saving checkbox state:', error);
+    }
 }
 
 // Load checkbox state when the page loads
