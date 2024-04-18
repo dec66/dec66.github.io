@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const today = new Date();
-    today.setHours(today.getHours() - 4);
-    switch (today.getDay()) {
+    const today = new Date().getDay();
+    switch (today) {
         case 1:
             document.getElementById('monday').style.display = 'block';
             break;
