@@ -28,10 +28,10 @@ function displaySectionForToday() {
 function toggleAllSections() {
     const sections = document.querySelectorAll('.day-content');
     sections.forEach(section => {
-        if (section.style.display === 'none') {
-            section.style.display = 'block';
-        } else {
+        if (section.style.display === 'block') {
             section.style.display = 'none';
+        } else {
+            section.style.display = 'block';
         }
     })
     displaySectionForToday();
