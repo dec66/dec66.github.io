@@ -24,3 +24,46 @@ document.addEventListener('DOMContentLoaded', function () {
             break;
     }
 });
+
+// Retrieve checkbox state from local storage
+function loadCheckboxState() {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+    const savedState = localStorage.getItem('checkboxState');
+    if (savedState) {
+        const checkboxState = JSON.parse(savedState);
+        if (checkboxState.date === today) {
+            // Apply saved state to checkboxes
+            for (const checkboxId in checkboxState) {
+                if (checkboxId !== 'date') {
+                    const checkbox = document.getElementById(checkboxId);
+                    if (checkbox) {
+                        checkbox.checked = checkboxState[checkboxId];
+                    }
+                }
+            }
+        } else {
+            // Clear old state if it's from a previous day
+            localStorage.removeItem('checkboxState');
+        }
+    }
+}
+
+// Save checkbox state to local storage
+function saveCheckboxState() {
+    const checkboxState = { date: new Date().toISOString().split('T')[0] }; // Store today's date
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox) => {
+        checkboxState[checkbox.id] = checkbox.checked;
+    });
+    localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+}
+
+// Load checkbox state when the page loads
+window.addEventListener('DOMContentLoaded', () => {
+    loadCheckboxState();
+});
+
+// Save checkbox state when checkboxes are clicked
+document.addEventListener('change', () => {
+    saveCheckboxState();
+});
