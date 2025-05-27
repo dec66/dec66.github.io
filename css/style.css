@@ -18,8 +18,8 @@ a {
 }
 
 .checklist li:not(:has(input[type="checkbox"])) {
-  padding-left: 22px;
-  padding-top: 5px;
+  padding-left: 24px;
+  padding-top: 2px;
 }
 
 .checklist input {
