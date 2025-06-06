@@ -40,7 +40,7 @@ function toggleAllSections() {
 // Retrieve checkbox state from local storage
 function loadCheckboxState() {
     const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
-    const savedState = localStorage.getItem('checkboxState');
+    const savedState = localStorage.getItem('hgssDailyState');
     if (savedState) {
         const checkboxState = JSON.parse(savedState);
         if (checkboxState.date === today) {
@@ -53,7 +53,7 @@ function loadCheckboxState() {
             });
         } else {
             // Clear old state if it's from a previous day
-            localStorage.removeItem('checkboxState');
+            localStorage.removeItem('hgssDailyState');
         }
     }
 }
@@ -66,7 +66,7 @@ function saveCheckboxState() {
         checkboxes.forEach((checkbox, index) => {
             checkboxState[`checkbox_${index}`] = checkbox.checked;
         });
-        localStorage.setItem('checkboxState', JSON.stringify(checkboxState));
+        localStorage.setItem('hgssDailyState', JSON.stringify(checkboxState));
     } catch (error) {
         console.error('Error saving checkbox state:', error);
     }
