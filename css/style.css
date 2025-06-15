@@ -9,3 +9,19 @@ body {
 a {
   text-decoration: none;
 }
+
+.checklist-table {
+  max-width: 500px;   /* or any width you prefer */
+  width: 100%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+}
+.checklist-table th, .checklist-table td {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  text-align: left;
+}
+.checklist-table th {
+  cursor: pointer;
+  background: #f0f0f0;
+}
